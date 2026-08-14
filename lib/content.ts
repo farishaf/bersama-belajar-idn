@@ -5,6 +5,7 @@ export const nav = {
   place: { en: "Karang Pola", id: "Karang Pola" },
   impact: { en: "What we measure", id: "Yang kami ukur" },
   who: { en: "Who we are", id: "Siapa kami" },
+  activities: { en: "Activities", id: "Kegiatan" },
   join: { en: "Get involved", id: "Ikut terlibat" },
   donate: { en: "Contribute", id: "Kontribusi" },
 };
@@ -332,4 +333,33 @@ export const whoJoin = {
     id: "Relawan, donatur, dan organisasi mitra sangat kami sambut.",
   } satisfies Bi,
   cta: { en: "Get involved", id: "Ikut terlibat" } satisfies Bi,
+};
+
+// --- Activities page ---
+
+export const activitiesHero = {
+  eyebrow: { en: "Activities", id: "Kegiatan" } satisfies Bi,
+  title: {
+    en: "What a Sunday actually looks like.",
+    id: "Seperti apa hari Minggu di sini.",
+  } satisfies Bi,
+  body: {
+    en: "Sessions, field trips, celebrations — a running record of what we build together, in photos.",
+    id: "Sesi belajar, kunjungan lapangan, perayaan — catatan berjalan tentang apa yang kami bangun bersama, dalam foto.",
+  } satisfies Bi,
+};
+
+export const activitiesEmpty = {
+  title: { en: "Nothing published yet.", id: "Belum ada yang terbit." } satisfies Bi,
+  body: {
+    en: "Activities are managed from our CMS — check back soon.",
+    id: "Kegiatan dikelola dari CMS kami — kembali lagi sebentar lagi.",
+  } satisfies Bi,
+};
+
+export const activitiesBack = { en: "All activities", id: "Semua kegiatan" } satisfies Bi;
+
+export const activityGallery = {
+  heading: { en: "Photos", id: "Foto" } satisfies Bi,
+  close: { en: "Close", id: "Tutup" } satisfies Bi,
 };
