@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("/tt_norms_pro_serif/TT%20Norms%20Pro%20Serif%20Trial%20ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-paper: #fdfbf2;
   --color-ink: #211b54;
@@ -10,6 +18,7 @@
 
   --font-display: var(--font-quicksand);
   --font-body: var(--font-nunito-sans);
+  --font-tt-norms: "TT Norms Pro", var(--font-display), sans-serif;
 }
 
 @theme inline {
@@ -21,6 +30,7 @@
   --color-yellow: var(--color-yellow);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+  --font-tt-norms: var(--font-tt-norms);
 }
 
 html,

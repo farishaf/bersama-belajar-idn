@@ -17,7 +17,7 @@ export default function Footer() {
         </span>
       </div>
       <div className="flex gap-6 text-sm font-semibold text-ink/60">
-        <Link href="/#join" className="hover:text-ink">
+        <Link href="https://www.instagram.com/bersamabelajar.idn/" target="_blank" rel="noopener noreferrer" className="hover:text-ink">
           Instagram
         </Link>
         <Link href="/#join" className="hover:text-ink">

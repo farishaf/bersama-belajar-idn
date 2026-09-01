@@ -7,10 +7,8 @@ import { nav } from "@/lib/content";
 import Image from "next/image";
 
 const links = [
-  { href: "/#story", key: nav.story },
-  { href: "/#place", key: nav.place },
-  { href: "/#impact", key: nav.impact },
   { href: "/who-we-are", key: nav.who },
+  { href: "/activities", key: nav.activities },
 ];
 
 export default function Header() {
@@ -22,8 +20,16 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-5 py-3.5 sm:gap-9 sm:px-8">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Image src="/bersama_belajar_logo.png" alt="Logo" width={40} height={40} className="h-10 w-10" />
-          <span className="font-display text-[19px] leading-none font-bold tracking-tight">
+          <span className="grid size-12 shrink-0 place-items-center rounded-full bg-orange p-2">
+            <Image
+              src="/icons/bersamabelajar-icon-only.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="h-full w-full object-contain"
+            />
+          </span>
+          <span className="font-tt-norms text-[19px] leading-none font-extrabold tracking-tight">
             bersama
             <br />
             belajar
