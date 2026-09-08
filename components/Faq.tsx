@@ -31,7 +31,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center gap-4.5 px-6 py-5.5 text-left font-inherit"
+        className="flex w-full cursor-pointer items-center gap-4.5 px-6 py-5.5 text-left font-inherit transition-colors hover:bg-ink/5"
       >
         <span className="flex-1 text-[19px] leading-snug font-bold font-display sm:text-[20px]">{q}</span>
         <span ref={iconRef} className="w-7 h-7 pb-[1px] rounded-full flex items-center justify-center text-2xl font-bold leading-none text-ink transition-colors"
