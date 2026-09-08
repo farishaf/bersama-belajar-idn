@@ -47,16 +47,16 @@ export function Hero() {
         <p className="mb-8 max-w-[520px] text-[18px] leading-relaxed text-ink/80 sm:text-[19px]">
           {t(c.hero.body)}
         </p>
-        <div className="flex flex-wrap items-center gap-3.5">
+        <div className="flex flex-col items-stretch gap-3.5 sm:flex-row sm:flex-wrap sm:items-center">
           <Link
             href="/#join"
-            className="rounded-full bg-orange px-7 py-4 text-[16px] font-bold text-paper transition-all hover:-translate-y-0.5 hover:bg-red"
+            className="rounded-full bg-orange px-7 py-4 text-center text-[16px] font-bold text-paper transition-all hover:-translate-y-0.5 hover:bg-red sm:w-auto"
           >
             {t(c.hero.volunteer)}
           </Link>
           <Link
             href="/#story"
-            className="rounded-full border-[1.5px] border-ink/25 px-6 py-4 text-[16px] font-bold transition-colors hover:border-ink"
+            className="rounded-full border-[1.5px] border-ink/25 px-6 py-4 text-center text-[16px] font-bold transition-colors hover:border-ink sm:w-auto"
           >
             {t(c.hero.readStory)}
           </Link>
