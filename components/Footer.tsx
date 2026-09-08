@@ -20,12 +20,10 @@ export default function Footer() {
         <Link href="https://www.instagram.com/bersamabelajar.idn/" target="_blank" rel="noopener noreferrer" className="hover:text-ink">
           Instagram
         </Link>
-        <Link href="/#join" className="hover:text-ink">
+        <Link href="mailto:bersamabelajar.idn@gmail.com" className="hover:text-ink">
           Email
         </Link>
-        <Link href="/#join" className="hover:text-ink">
-          WhatsApp
-        </Link>
+        <span className="text-ink/40">WhatsApp (soon)</span>
       </div>
     </footer>
   );
