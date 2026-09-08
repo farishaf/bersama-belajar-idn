@@ -15,10 +15,60 @@ const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://bersamabelajar.id";
+const siteName = "Bersama Belajar";
+const description =
+  "A small community in Jakarta building an environment where children want to learn.";
+
 export const metadata: Metadata = {
-  title: "Bersama Belajar — Kampung Pemulung Karang Pola",
-  description:
-    "A small community in Jakarta building an environment where children want to learn.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} — Kampung Pemulung Karang Pola`,
+    template: `%s — ${siteName}`,
+  },
+  description,
+  keywords: [
+    "Bersama Belajar",
+    "Kampung Pemulung Karang Pola",
+    "komunitas belajar Jakarta",
+    "pendidikan anak Jakarta",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName,
+    title: `${siteName} — Kampung Pemulung Karang Pola`,
+    description,
+    locale: "id_ID",
+    images: [{ url: "/bersama_belajar_logo.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} — Kampung Pemulung Karang Pola`,
+    description,
+    images: ["/bersama_belajar_logo.png"],
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}/bersama_belajar_logo.png`,
+  description,
+  areaServed: {
+    "@type": "Place",
+    name: "Kampung Pemulung Karang Pola, Jakarta",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -28,6 +78,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${quicksand.variable} ${nunitoSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
