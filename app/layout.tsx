@@ -56,6 +56,9 @@ export const metadata: Metadata = {
     description,
     images: ["/bersama_belajar_logo.png"],
   },
+  verification: {
+    google: "google-site-verification=VskocSdQhDqxrcDKNiK71evNgCUzmaPYpfSp76iGK9k",
+  }
 };
 
 const organizationJsonLd = {
